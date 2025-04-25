@@ -18,6 +18,9 @@ async function connectDB() {
 
 connectDB();
 
+const urlRoutes = require("./routes/urlRoutes");
+app.use("/", urlRoutes);
+
 app.get("/", (req, res) => {
     res.send("working!");
 });
